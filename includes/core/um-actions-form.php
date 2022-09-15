@@ -902,7 +902,7 @@ function um_submit_form_errors_hook_( $args ) {
 
 			if ( isset( $args['description'] ) ) {
 				$max_chars = UM()->options()->get( 'profile_bio_maxchars' );
-				$profile_show_bio = UM()->options()->get( 'profile_show_bio' );
+				$profile_show_bio = UM()->options()->get( 'profile_show_bio' ); 
 
 				if ( $profile_show_bio ) {
 					if ( mb_strlen( str_replace( array( "\r\n", "\n", "\r\t", "\t" ), ' ', $args['description'] ) ) > $max_chars && $max_chars ) {
